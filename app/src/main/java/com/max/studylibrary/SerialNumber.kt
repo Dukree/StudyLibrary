@@ -51,18 +51,18 @@ return getSerial()
     }
 
 
-//   override fun onRequestPermissionsResult(
-//        requestCode: Int,
-//        vararg permissions: String?,
-//        grantResults: IntArray
-//    ) {
-//       super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-//       when (requestCode) {
-//            requestState -> if (grantResults.isNotEmpty() && grantResults[0] == PackageManager
-//                    .PERMISSION_GRANTED
-//            ) {
-//                checkedPermission = PackageManager.PERMISSION_GRANTED
-//            }
-//        }
-//    }
+   override fun onRequestPermissionsResult(
+        requestCode: Int,
+        vararg permissions: String?,
+        grantResults: IntArray
+    ) {
+       super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+       when (requestCode) {
+            requestState -> if (grantResults.isNotEmpty() && grantResults[0] == PackageManager
+                    .PERMISSION_GRANTED
+            ) {
+                checkedPermission = PackageManager.PERMISSION_GRANTED
+            }
+        }
+    }
 }
