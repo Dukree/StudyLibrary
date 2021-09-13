@@ -20,11 +20,19 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.sampleText.text =getSerial()
+
+        // Example of a call to a native method
+        binding.sampleText.text = getSerial()
+
+        binding.textView.text = getPackages()
 
     }
-    external fun stringFromJNI(): String
+    /**
+     * A native method that is implemented by the 'studylibrary' native library,
+     * which is packaged with this application.
+     */
     external fun getSerial():String
+    external fun getPackages():String
 
 
     companion object {
@@ -33,14 +41,10 @@ class MainActivity : AppCompatActivity() {
             System.loadLibrary("studylibrary")
         }
     }
-        // Example of a call to a native method
-       // binding.sampleText.text = stringFromJNI()
+
     }
 
-    /**
-     * A native method that is implemented by the 'studylibrary' native library,
-     * which is packaged with this application.
-     */
+
 
     
 

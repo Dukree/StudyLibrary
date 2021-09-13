@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">StudyLibrary</string>
+    <string name="getString">Узнать серийный номер устройства</string>
+    <string name="getPackages">Показать имена пакетов</string>
 </resources>
